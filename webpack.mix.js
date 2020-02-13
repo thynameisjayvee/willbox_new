@@ -1,12 +1,11 @@
 const path = require('path')
-const fs = require('fs-extra')
 const mix = require('laravel-mix')
 require('laravel-mix-versionhash')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-//plugins
-const CompressionPlugin = require('compression-webpack-plugin');
-require('laravel-mix-imagemin');
+// plugins
+const CompressionPlugin = require('compression-webpack-plugin')
+require('laravel-mix-imagemin')
 
 mix
   .js('resources/js/app.js', 'public/dist/js')
@@ -15,13 +14,13 @@ mix
     processCssUrls: false
   })
   .imagemin('assets/img/**.**', {
-    context: 'resources',
+    context: 'resources'
   }, {
     plugins: [
       require('imagemin-mozjpeg')({
         quality: 90,
         progressive: true
-      }),
+      })
     ]
   })
 
@@ -44,8 +43,8 @@ mix.webpackConfig({
       algorithm: 'gzip',
       test: /\.(js|css|html|svg)$/,
       threshold: 10240,
-      minRatio: 0.8,
-    }),
+      minRatio: 0.8
+    })
   ],
   resolve: {
     extensions: ['.js', '.json', '.vue'],
