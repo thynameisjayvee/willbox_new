@@ -24,3 +24,7 @@
 # Install Node.js v10.x
 #curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 #sudo apt-get install -y nodejs
+
+# change <hostname>.conf
+sudo cp /home/vagrant/code/etc/willbox.local.com.conf /etc/nginx/conf.d/willbox.local.com.conf
+sudo service nginx restart
