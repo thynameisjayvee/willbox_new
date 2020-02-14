@@ -1,30 +1,57 @@
 <template>
-  <div class="basic-layout d-flex align-items-center justify-content-center m-0 bg-white">
-    <child />
+  <div class="custom-container">
+    <div class="custom-banner-img">
+      <img src="assets/img/banner.png" alt="">
+    </div>
+    <div class="custom-wrapper">
+      <v-navbar />
+      <child />
+    </div>
+    <footer class="custom-footer">
+      <div>
+        testset foooter
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
+import Navbar from '~/components/Navbar'
 export default {
-  name: 'BasicLayout'
+  name: 'BasicLayout',
+  components: {
+    'v-navbar': Navbar
+  }
 }
 </script>
 
-<style lang="scss">
-.basic-layout {
-  color: #636b6f;
-  height: 100vh;
-  font-weight: 100;
-  position: relative;
-
-  .links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+<style lang="scss" scoped>
+  .custom {
+    &-container {
+      min-height: 100vh;
+      position: relative;
+      background-color: pink;
+      padding-bottom: 60px;
+    }
+    &-banner-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        width: 100%;
+      }
+    }
+    &-wrapper {
+      width: 1170px;
+      margin: 0 auto;
+    }
+    &-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: white;
+    }
   }
-}
 </style>

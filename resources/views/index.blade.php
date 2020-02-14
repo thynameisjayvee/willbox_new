@@ -24,10 +24,6 @@ $config = [
     window.config = @json($config);
   </script>
 
-  @if(config('app.env') == 'local')
-    <script src="http://localhost:35729/livereload.js"></script>
-  @endif
-
   {{-- Load the application scripts --}}
   <script src="{{ mix('dist/js/app.js') }}"></script>
 </body>
