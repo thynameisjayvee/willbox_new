@@ -1,15 +1,15 @@
 <template>
   <div class="custom-container">
     <div class="custom-banner-img">
-      <img src="assets/img/banner.png" alt="">
+      <img src="assets/img/banner.png" alt="banner-image">
     </div>
     <div class="custom-wrapper">
       <v-navbar />
       <child />
     </div>
     <footer class="custom-footer">
-      <div>
-        testset foooter
+      <div class="custom-footer--text">
+        ©Copyright 2020 Willbox XXXXXXXXXX
       </div>
     </footer>
   </div>
@@ -30,10 +30,10 @@ export default {
     &-container {
       min-height: 100vh;
       position: relative;
-      background-color: pink;
-      padding-bottom: 60px;
+      padding-bottom: 80px;
     }
     &-banner-img {
+      z-index: -1;
       position: absolute;
       top: 0;
       left: 0;
@@ -46,12 +46,21 @@ export default {
       margin: 0 auto;
     }
     &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 60px;
-      background-color: white;
+      height: 80px;
+      background-color: #4A4A4A;
+      &--text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        color: white;
+      }
     }
   }
 </style>

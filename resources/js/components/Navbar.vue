@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" class="rm-box-shadow c-px-32px">
+  <b-navbar toggleable="lg" type="dark" class="rm-box-shadow c-px-22px">
     <b-navbar-brand class="c-navbar-brand" href="#">
       Giho
     </b-navbar-brand>
@@ -42,8 +42,8 @@ export default {
       font-weight: 600;
       margin-right: -15px;
     }
-    &-px-32px {
-      padding: 0 32px;
+    &-px-22px {
+      padding: 0 22px;
     }
     &-mx-15px {
       margin: 0 15px;
