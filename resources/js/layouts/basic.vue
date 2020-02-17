@@ -42,7 +42,7 @@ export default {
       }
     }
     &-wrapper {
-      width: 1170px;
+      max-width: 1170px;
       margin: 0 auto;
     }
     &-footer {

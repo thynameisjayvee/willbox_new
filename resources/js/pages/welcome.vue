@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="container-fluid px-0">
+    <!-- start of search box -->
     <div class="c-search-box">
       <h1 class="c-search-title">
         Direct Matching Logistics Platform
@@ -13,6 +14,7 @@
                 <span style="vertical-align: middle;">トラック</span>
               </div>
             </template>
+            <!-- FORM START -->
             <form action="" style="margin-top: 30px;">
               <b-form-row>
                 <b-col cols="12">
@@ -24,11 +26,82 @@
                     class="c-search-input supplier"
                   />
                 </b-col>
-                <h2 class="c-search-form-title">
+                <h2 class="c-search-form-title w-100">
                   基本情報
                 </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="搬入港を選択してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="CYカット日"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="出発地を入力してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="梱包仕様を選択してください"
+                    />
+                  </b-col>
+                </b-row>
+                <h2 class="c-search-form-title w-100">
+                  製品情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="長さ(L) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="幅(W) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="高さ(H) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="製品重量 kg"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
+                    <b-form-checkbox-group
+                      class="c-search-checkbox"
+                      :options="[{ text: '引取り', value: '引取り' },
+                                 { text: '保険希望', value: '保険希望' },
+                      ]"
+                      name="flavour-2a"
+                      stacked
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-button variant="primary" squared class="c-search-btn float-md-right">
+                      検索
+                    </b-button>
+                  </b-col>
+                </b-row>
               </b-form-row>
             </form>
+            <!-- FORM END -->
           </b-tab>
           <b-tab>
             <template #title>
@@ -37,7 +110,94 @@
                 <span style="vertical-align: middle;">梱包</span>
               </div>
             </template>
-            <p>I'm the 2nd tab</p>
+            <!-- FORM START -->
+            <form action="" style="margin-top: 30px;">
+              <b-form-row>
+                <b-col cols="12">
+                  <b-form-input
+                    id="input-1"
+                    type="text"
+                    required
+                    placeholder="特定業者を検索"
+                    class="c-search-input supplier"
+                  />
+                </b-col>
+                <h2 class="c-search-form-title w-100">
+                  基本情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="搬入港を選択してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="CYカット日"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="出発地を入力してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="梱包仕様を選択してください"
+                    />
+                  </b-col>
+                </b-row>
+                <h2 class="c-search-form-title w-100">
+                  製品情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="長さ(L) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="幅(W) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="高さ(H) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="製品重量 kg"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
+                    <b-form-checkbox-group
+                      class="c-search-checkbox"
+                      :options="[{ text: '引取り', value: '引取り' },
+                                 { text: '保険希望', value: '保険希望' },
+                      ]"
+                      name="flavour-2a"
+                      stacked
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-button variant="primary" squared class="c-search-btn float-md-right">
+                      検索
+                    </b-button>
+                  </b-col>
+                </b-row>
+              </b-form-row>
+            </form>
+            <!-- FORM END -->
           </b-tab>
           <b-tab>
             <template #title>
@@ -46,7 +206,94 @@
                 <span style="vertical-align: middle;">通関</span>
               </div>
             </template>
-            <p>I'm the 3rd tab</p>
+            <!-- FORM START -->
+            <form action="" style="margin-top: 30px;">
+              <b-form-row>
+                <b-col cols="12">
+                  <b-form-input
+                    id="input-1"
+                    type="text"
+                    required
+                    placeholder="特定業者を検索"
+                    class="c-search-input supplier"
+                  />
+                </b-col>
+                <h2 class="c-search-form-title w-100">
+                  基本情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="搬入港を選択してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="CYカット日"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="出発地を入力してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="梱包仕様を選択してください"
+                    />
+                  </b-col>
+                </b-row>
+                <h2 class="c-search-form-title w-100">
+                  製品情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="長さ(L) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="幅(W) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="高さ(H) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="製品重量 kg"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
+                    <b-form-checkbox-group
+                      class="c-search-checkbox"
+                      :options="[{ text: '引取り', value: '引取り' },
+                                 { text: '保険希望', value: '保険希望' },
+                      ]"
+                      name="flavour-2a"
+                      stacked
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-button variant="primary" squared class="c-search-btn float-md-right">
+                      検索
+                    </b-button>
+                  </b-col>
+                </b-row>
+              </b-form-row>
+            </form>
+            <!-- FORM END -->
           </b-tab>
           <b-tab>
             <template #title>
@@ -55,11 +302,99 @@
                 <span style="vertical-align: middle;">通関</span>
               </div>
             </template>
-            <p>I'm the 4th tab</p>
+            <!-- FORM START -->
+            <form action="" style="margin-top: 30px;">
+              <b-form-row>
+                <b-col cols="12">
+                  <b-form-input
+                    id="input-1"
+                    type="text"
+                    required
+                    placeholder="特定業者を検索"
+                    class="c-search-input supplier"
+                  />
+                </b-col>
+                <h2 class="c-search-form-title w-100">
+                  基本情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="搬入港を選択してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="CYカット日"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="出発地を入力してください"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="3">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="梱包仕様を選択してください"
+                    />
+                  </b-col>
+                </b-row>
+                <h2 class="c-search-form-title w-100">
+                  製品情報
+                </h2>
+                <b-row class="no-gutters w-100 c-mx-5px">
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="長さ(L) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="幅(W) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="高さ(H) mm"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-form-input
+                      class="c-search-input w-arr"
+                      placeholder="製品重量 kg"
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
+                    <b-form-checkbox-group
+                      class="c-search-checkbox"
+                      :options="[{ text: '引取り', value: '引取り' },
+                                 { text: '保険希望', value: '保険希望' },
+                      ]"
+                      name="flavour-2a"
+                      stacked
+                    />
+                  </b-col>
+                  <b-col cols="12" md="2">
+                    <b-button variant="primary" squared class="c-search-btn float-md-right">
+                      検索
+                    </b-button>
+                  </b-col>
+                </b-row>
+              </b-form-row>
+            </form>
+            <!-- FORM END -->
           </b-tab>
         </b-tabs>
       </div>
     </div>
+    <!-- end of search box -->
   </div>
 </template>
 
@@ -86,6 +421,10 @@ export default {
 <style lang="scss" scoped>
   ::v-deep {
     .c {
+      &-mx-5px {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
       &-search {
         &-box {
           margin: 135px 106px 0 106px;
@@ -115,11 +454,38 @@ export default {
           font-size: 16px;
           font-weight: 300;
           color: #6E6E6E;
+          background-color: #EBEBEB;
+          border: 1px solid white;
+          height: 60px;
           &.supplier {
             width: 67.3%;
-            height: 60px;
-            background-color: #EBEBEB;
           }
+          &.w-arr {
+            background-image: url(/assets/img/blue-arr.png);
+            background-repeat: no-repeat;
+            text-indent: 25px;
+            background-position: 15px 50%;
+          }
+        }
+        &-checkbox {
+          font-family: 'Hiragino Kaku Gothic Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          color: #6E6E6E;
+          .custom-control-label:before {
+            background-color: #EBEBEB;
+            border-radius: 6px;
+          }
+          .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: #007bff;
+          }
+        }
+        &-btn {
+          font-family: 'Hiragino Kaku Gothic Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 26px;
+          font-weight: 600;
+          max-height: 60px;
+          max-width: 80px;
         }
         &-tabs {
           .nav-link {

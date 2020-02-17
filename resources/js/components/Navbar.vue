@@ -9,15 +9,15 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto c-navbar-nav">
-        <b-navbar-item class="c-mx-15px">
+        <b-nav-item class="c-mx-15px">
           Gihoとは
-        </b-navbar-item>
-        <b-navbar-item class="c-mx-15px">
+        </b-nav-item>
+        <b-nav-item class="c-mx-15px">
           会員登録
-        </b-navbar-item>
-        <b-navbar-item class="c-mx-15px">
+        </b-nav-item>
+        <b-nav-item class="c-mx-15px">
           ログイン
-        </b-navbar-item>
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -41,6 +41,9 @@ export default {
       font-size: 22px;
       font-weight: 600;
       margin-right: -15px;
+      a {
+        color: white !important;
+      }
     }
     &-px-22px {
       padding: 0 22px;
