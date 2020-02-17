@@ -39,6 +39,7 @@ export default {
       left: 0;
       img {
         width: 100%;
+        min-height: 800px;
       }
     }
     &-wrapper {

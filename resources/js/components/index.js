@@ -4,6 +4,7 @@ import Child from './Child'
 import Button from './Button'
 import Checkbox from './Checkbox'
 import { HasError, AlertError, AlertSuccess } from 'vform'
+import StarRating from 'vue-star-rating'
 
 // Components that are registered globaly.
 [
@@ -17,3 +18,5 @@ import { HasError, AlertError, AlertSuccess } from 'vform'
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })
+
+Vue.component('star-rating', StarRating)

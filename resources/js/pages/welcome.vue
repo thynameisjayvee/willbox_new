@@ -395,6 +395,113 @@
       </div>
     </div>
     <!-- end of search box -->
+    <!-- start of services box -->
+    <div class="c-services-box">
+      <h1 class="c-services-title">
+        Gihoとは
+      </h1>
+      <b-row>
+        <b-col cols="12" md="4" class="text-center">
+          <div class="c-services-img d-flex justify-content-center">
+            <img src="assets/img/community.png" alt="community-icon">
+          </div>
+          <h2 class="c-services-sub-title">
+            高いお客さま満足度
+          </h2>
+          <p class="c-services-text-content">
+            ○〇〇○〇〇○〇〇○〇〇○〇〇○〇〇
+            〇○〇〇○〇〇〇○〇〇○〇〇
+          </p>
+        </b-col>
+        <b-col cols="12" md="4" class="text-center">
+          <div class="c-services-img d-flex justify-content-center">
+            <img src="assets/img/handshake.png" alt="handshake-icon">
+          </div>
+          <h2 class="c-services-sub-title">
+            業界初ダイレクトマッチング
+          </h2>
+          <p class="c-services-text-content">
+            ○〇〇○〇〇○〇〇○〇〇○〇〇○〇〇
+            〇○〇〇○〇〇〇○〇〇○〇〇
+          </p>
+        </b-col>
+        <b-col cols="12" md="4" class="text-center">
+          <div class="c-services-img d-flex justify-content-center">
+            <img src="assets/img/gear.png" alt="gear-icon">
+          </div>
+          <h2 class="c-services-sub-title">
+            スムーズなプラン選定
+          </h2>
+          <p class="c-services-text-content">
+            ○〇〇○〇〇○〇〇○〇〇○〇〇○〇〇
+            〇○〇〇○〇〇〇○〇〇○〇〇
+          </p>
+        </b-col>
+      </b-row>
+    </div>
+    <!-- end of services-box -->
+    <!-- start of products-box -->
+    <div class="c-products-box">
+      <h1 class="c-products-title text-center">
+        Gihoとは
+      </h1>
+      <b-row>
+        <b-col cols="12" md="6">
+          <div class="c-card">
+            <b-row>
+              <b-col cols="12" md="6">
+                <div class="title">
+                  株式会社○○○○
+                </div>
+              </b-col>
+              <b-col cols="12" md="6">
+                <b-button variant="primary" squared class="title btn ml-md-auto">
+                  このベンダーで検索
+                </b-button>
+              </b-col>
+              <b-col cols="12">
+                <star-rating
+                  :star-size="24"
+                  rating="4"
+                  :padding="8"
+                  read-only
+                  :show-rating="false"
+                  border-color="#ffd055"
+                />
+                <span>126件</span>
+              </b-col>
+            </b-row>
+          </div>
+        </b-col>
+        <b-col cols="12" md="6">
+          <div class="c-card">
+            <b-row>
+              <b-col cols="12" md="6">
+                <div class="title">
+                  株式会社○○○○
+                </div>
+              </b-col>
+              <b-col cols="12" md="6">
+                <b-button variant="primary" squared class="title btn ml-md-auto">
+                  このベンダーで検索
+                </b-button>
+              </b-col>
+              <b-col cols="12">
+                <star-rating
+                  :star-size="24"
+                  rating="4"
+                  :padding="8"
+                  read-only
+                  :show-rating="false"
+                  border-color="#ffd055"
+                />
+                <span>126件</span>
+              </b-col>
+            </b-row>
+          </div>
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
@@ -421,6 +528,20 @@ export default {
 <style lang="scss" scoped>
   ::v-deep {
     .c {
+      &-card {
+        padding: 10px 18px;
+        border-top: 4px solid #116ED6;
+        box-shadow: 3px 3px 10px #707070;
+        .title {
+          font-family: 'Hiragino Mincho ProN', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          &.btn {
+            font-size: 20px;
+            min-width: 218px;
+          }
+        }
+      }
       &-mx-5px {
         margin-left: 5px;
         margin-right: 5px;
@@ -517,6 +638,50 @@ export default {
               transform: translateX(-50%);
             }
           }
+        }
+      }
+      &-services {
+        &-box {
+          font-family: 'Hiragino Mincho ProN', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin-top: 220px;
+          margin-left: 45px;
+          margin-right: 45px;
+          color: #000;
+        }
+        &-title {
+          font-size: 34px;
+          font-weight: 600;
+          margin-bottom: 36px;
+          text-align: center;
+        }
+        &-sub-title {
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        &-sub-text-content {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        &-img {
+          min-height: 150px;
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+      &-products {
+        &-box {
+          font-family: 'Hiragino Mincho ProN', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin-top: 115px;
+          margin-left: 36px;
+          margin-right: 36px;
+        }
+        &-title {
+          font-size: 34px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 55px;
         }
       }
     }
