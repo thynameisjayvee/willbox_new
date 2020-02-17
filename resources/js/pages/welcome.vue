@@ -446,7 +446,11 @@
         Gihoとは
       </h1>
       <b-row>
-        <b-col cols="12" md="6">
+        <b-col cols="12" md="6"
+          v-for="index in 6"
+          :key="index"
+          class="mb-4"
+        >
           <div class="c-card">
             <b-row>
               <b-col cols="12" md="6">
@@ -459,43 +463,23 @@
                   このベンダーで検索
                 </b-button>
               </b-col>
-              <b-col cols="12">
-                <star-rating
-                  :star-size="24"
-                  rating="4"
-                  :padding="8"
-                  read-only
-                  :show-rating="false"
-                  border-color="#ffd055"
-                />
-                <span>126件</span>
-              </b-col>
-            </b-row>
-          </div>
-        </b-col>
-        <b-col cols="12" md="6">
-          <div class="c-card">
-            <b-row>
-              <b-col cols="12" md="6">
-                <div class="title">
-                  株式会社○○○○
+              <b-col cols="12" class="mt-1 d-flex">
+                <div class="mr-md-3">
+                  <star-rating
+                    :star-size="24"
+                    rating="4"
+                    :padding="8"
+                    read-only
+                    :show-rating="false"
+                    border-color="#ffd055"
+                  />
                 </div>
+                <span class="item-text">126件</span>
               </b-col>
-              <b-col cols="12" md="6">
-                <b-button variant="primary" squared class="title btn ml-md-auto">
-                  このベンダーで検索
-                </b-button>
-              </b-col>
-              <b-col cols="12">
-                <star-rating
-                  :star-size="24"
-                  rating="4"
-                  :padding="8"
-                  read-only
-                  :show-rating="false"
-                  border-color="#ffd055"
-                />
-                <span>126件</span>
+              <b-col cols="12" class="d-flex mt-3">
+                <div class="chips">トラック</div>
+                <div class="chips">梱包</div>
+                <div class="chips">倉庫保管</div>
               </b-col>
             </b-row>
           </div>
@@ -540,6 +524,25 @@ export default {
             font-size: 20px;
             min-width: 218px;
           }
+        }
+        .item-text {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+          font-weight: bold;
+          color: #585858;
+        }
+        .chips {
+          border-radius: 8px;
+          background-color: #DDDDE5;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          color: #9294A3;
+          min-width: 84px;
+          text-align: center;
+        }
+        div.chips:not(:last-child) {
+          margin-right: 16px;
         }
       }
       &-mx-5px {
@@ -676,6 +679,7 @@ export default {
           margin-top: 115px;
           margin-left: 36px;
           margin-right: 36px;
+          margin-bottom: 42px;
         }
         &-title {
           font-size: 34px;

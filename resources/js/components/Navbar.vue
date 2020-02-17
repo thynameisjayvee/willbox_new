@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" class="rm-box-shadow c-px-22px">
+  <b-navbar toggleable="lg" :type="type" class="rm-box-shadow c-px-22px">
     <b-navbar-brand class="c-navbar-brand" href="#">
       Giho
     </b-navbar-brand>
@@ -8,7 +8,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto c-navbar-nav">
+      <b-navbar-nav :class="['ml-auto c-navbar-nav', navTextColor]">
         <b-nav-item class="c-mx-15px">
           Gihoとは
         </b-nav-item>
@@ -25,6 +25,16 @@
 
 <script>
 export default {
+  props: {
+    type: {
+      type: String,
+      default: 'dark'
+    }, 
+    navTextColor: {
+      type: String,
+      default: 'white--text'
+    }
+  }
 }
 </script>
 
@@ -41,8 +51,11 @@ export default {
       font-size: 22px;
       font-weight: 600;
       margin-right: -15px;
-      a {
-        color: white !important;
+      &.white--text a {
+        color: white  !important;
+      } 
+      &.black--text a {
+        color: #000 !important;
       }
     }
     &-px-22px {
