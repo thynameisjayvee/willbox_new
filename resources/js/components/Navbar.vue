@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" :type="type" class="rm-box-shadow c-px-22px">
-    <b-navbar-brand class="c-navbar-brand" href="#">
+    <b-navbar-brand class="c-navbar-brand" :to="{ name: 'welcome' }">
       Giho
     </b-navbar-brand>
 
@@ -29,7 +29,7 @@ export default {
     type: {
       type: String,
       default: 'dark'
-    }, 
+    },
     navTextColor: {
       type: String,
       default: 'white--text'
@@ -53,7 +53,7 @@ export default {
       margin-right: -15px;
       &.white--text a {
         color: white  !important;
-      } 
+      }
       &.black--text a {
         color: #000 !important;
       }

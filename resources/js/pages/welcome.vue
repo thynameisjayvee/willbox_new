@@ -94,7 +94,7 @@
                     />
                   </b-col>
                   <b-col cols="12" md="2">
-                    <b-button variant="primary" squared class="c-search-btn float-md-right">
+                    <b-button variant="primary" squared class="c-search-btn float-md-right" :to="{ name: 'results' }">
                       検索
                     </b-button>
                   </b-col>
@@ -446,9 +446,11 @@
         Gihoとは
       </h1>
       <b-row>
-        <b-col cols="12" md="6"
+        <b-col
           v-for="index in 6"
           :key="index"
+          cols="12"
+          md="6"
           class="mb-4"
         >
           <div class="c-card">
@@ -477,9 +479,15 @@
                 <span class="item-text">126件</span>
               </b-col>
               <b-col cols="12" class="d-flex mt-3">
-                <div class="chips">トラック</div>
-                <div class="chips">梱包</div>
-                <div class="chips">倉庫保管</div>
+                <div class="chips">
+                  トラック
+                </div>
+                <div class="chips">
+                  梱包
+                </div>
+                <div class="chips">
+                  倉庫保管
+                </div>
               </b-col>
             </b-row>
           </div>
