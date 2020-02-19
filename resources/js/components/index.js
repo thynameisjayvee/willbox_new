@@ -5,6 +5,7 @@ import Button from './Button'
 import Checkbox from './Checkbox'
 import { HasError, AlertError, AlertSuccess } from 'vform'
 import StarRating from 'vue-star-rating'
+import DatePicker from 'vue2-datepicker'
 
 // Components that are registered globaly.
 [
@@ -20,3 +21,4 @@ import StarRating from 'vue-star-rating'
 })
 
 Vue.component('star-rating', StarRating)
+Vue.component('custom-datepicker', DatePicker)

@@ -10,7 +10,7 @@
                 <b-form-input
                   class="w-arr--white"
                   type="text"
-                  value="東京港"
+                  value="横浜港"
                   placeholder="test"
                 />
               </b-col>
@@ -19,7 +19,7 @@
                 <b-form-input
                   class="w-arr--white"
                   type="text"
-                  value="2020/02/02"
+                  value="2020/02/28"
                   placeholder="test"
                 />
               </b-col>
@@ -28,7 +28,7 @@
                 <b-form-input
                   class="w-arr--white"
                   type="text"
-                  value="東京都XXX-YYYY-ZZZ"
+                  value="茨城県つくば市中山203-1"
                   placeholder="test"
                 />
               </b-col>
@@ -37,7 +37,7 @@
                 <b-form-input
                   class="w-arr--white"
                   type="text"
-                  value="スチール梱包"
+                  value="C/S(ケース／木箱)"
                   placeholder="test"
                 />
               </b-col>
@@ -60,7 +60,7 @@
                   class="supplier"
                   type="text"
                   placeholder="test"
-                  value="株式会社○○"
+                  value="株式会社ABC運送"
                 />
               </b-col>
               <h2 class="product-info">
@@ -72,29 +72,30 @@
                     <b-form-input
                       class="w-arr"
                       type="text"
-                      placeholder="長さ(L) mm"
+                      value="3,400" placeholder="長さ(L) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="幅(W) mm"
+                      value="2,800" placeholder="幅(W) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="高さ(H) mm"
+                      value="3,000" placeholder="高さ(H) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="製品重量 kg"
+                      value="5,000" placeholder="製品重量 kg"
                     />
                   </b-col>
                   <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
                     <b-form-checkbox-group
+                      v-model="selected"
                       class="c-checkbox"
                       :options="[{ text: '引取り', value: '引取り' },
                                  { text: '保険希望', value: '保険希望' },
@@ -125,7 +126,7 @@
                   class="supplier"
                   type="text"
                   placeholder="test"
-                  value="株式会社○○"
+                  value="株式会社ABC運送"
                 />
               </b-col>
               <h2 class="product-info">
@@ -137,29 +138,30 @@
                     <b-form-input
                       class="w-arr"
                       type="text"
-                      placeholder="長さ(L) mm"
+                      value="3,400" placeholder="長さ(L) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="幅(W) mm"
+                      value="2,800" placeholder="幅(W) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="高さ(H) mm"
+                      value="3,000" placeholder="高さ(H) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="製品重量 kg"
+                      value="5,000" placeholder="製品重量 kg"
                     />
                   </b-col>
                   <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
                     <b-form-checkbox-group
+                      v-model="selected"
                       class="c-checkbox"
                       :options="[{ text: '引取り', value: '引取り' },
                                  { text: '保険希望', value: '保険希望' },
@@ -190,7 +192,7 @@
                   class="supplier"
                   type="text"
                   placeholder="test"
-                  value="株式会社○○"
+                  value="株式会社ABC運送"
                 />
               </b-col>
               <h2 class="product-info">
@@ -202,29 +204,30 @@
                     <b-form-input
                       class="w-arr"
                       type="text"
-                      placeholder="長さ(L) mm"
+                      value="3,400" placeholder="長さ(L) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="幅(W) mm"
+                      value="2,800" placeholder="幅(W) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="高さ(H) mm"
+                      value="3,000" placeholder="高さ(H) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="製品重量 kg"
+                      value="5,000" placeholder="製品重量 kg"
                     />
                   </b-col>
                   <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
                     <b-form-checkbox-group
+                      v-model="selected"
                       class="c-checkbox"
                       :options="[{ text: '引取り', value: '引取り' },
                                  { text: '保険希望', value: '保険希望' },
@@ -255,7 +258,7 @@
                   class="supplier"
                   type="text"
                   placeholder="test"
-                  value="株式会社○○"
+                  value="株式会社ABC運送"
                 />
               </b-col>
               <h2 class="product-info">
@@ -267,29 +270,30 @@
                     <b-form-input
                       class="w-arr"
                       type="text"
-                      placeholder="長さ(L) mm"
+                      value="3,400" placeholder="長さ(L) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="幅(W) mm"
+                      value="2,800" placeholder="幅(W) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="高さ(H) mm"
+                      value="3,000" placeholder="高さ(H) mm"
                     />
                   </b-col>
                   <b-col cols="12" md="2">
                     <b-form-input
                       class="w-arr"
-                      placeholder="製品重量 kg"
+                      value="5,000" placeholder="製品重量 kg"
                     />
                   </b-col>
                   <b-col cols="12" md="2" class="d-flex align-items-center justify-content-center">
                     <b-form-checkbox-group
+                      v-model="selected"
                       class="c-checkbox"
                       :options="[{ text: '引取り', value: '引取り' },
                                  { text: '保険希望', value: '保険希望' },
@@ -334,7 +338,8 @@ export default {
 
   data: () => ({
     title: window.config.appName,
-    detailToggle: false
+    detailToggle: false,
+    selected: ['引取り']
   })
 }
 </script>

@@ -37,10 +37,7 @@
                     />
                   </b-col>
                   <b-col cols="12" md="3">
-                    <b-form-input
-                      class="c-search-input w-arr"
-                      placeholder="CYカット日"
-                    />
+                    <custom-datepicker v-model="date" class="rm-mx-calendar-icon w-100" input-class="form-control c-search-input w-arr" :clearable="false" />
                   </b-col>
                   <b-col cols="12" md="3">
                     <b-form-input
@@ -49,10 +46,7 @@
                     />
                   </b-col>
                   <b-col cols="12" md="3">
-                    <b-form-input
-                      class="c-search-input w-arr"
-                      placeholder="梱包仕様を選択してください"
-                    />
+                    <b-form-select v-model="selected" :options="options" class="c-search-input" />
                   </b-col>
                 </b-row>
                 <h2 class="c-search-form-title w-100">
@@ -508,7 +502,21 @@ export default {
   },
 
   data: () => ({
-    title: window.config.appName
+    title: window.config.appName,
+    date: new Date(),
+    selected: null,
+    options: [
+      { value: null, text: '梱包仕様を選択してください' },
+      { value: 1, text: '木箱梱包' },
+      { value: 2, text: 'C/S(ケース／木箱)' },
+      { value: 3, text: 'クレート梱包' },
+      { value: 4, text: 'スキッド梱包' },
+      { value: 5, text: 'パレット梱包' },
+      { value: 6, text: '強化ダンボール' },
+      { value: 7, text: 'スチール梱包' },
+      { value: 8, text: 'スチールスキッド梱包' },
+      { value: 9, text: 'ハイブリッド梱包' }
+    ]
   }),
 
   computed: mapGetters({
@@ -597,6 +605,15 @@ export default {
             background-repeat: no-repeat;
             text-indent: 25px;
             background-position: 15px 50%;
+          }
+          &.custom-select {
+            background: #EBEBEB url(/assets/img/blue-arr.png) no-repeat 15px 50%;
+            padding: 6px 12px;
+            text-indent: 25px;
+            option {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
           }
         }
         &-checkbox {
@@ -701,6 +718,11 @@ export default {
       &-border {
         &-bot {
           border-bottom: none;
+        }
+      }
+      &-mx-calendar-icon {
+        .mx-icon-calendar {
+          display: none;
         }
       }
     }
