@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-0">
-    <form action="">
+    <form action="" class="bg-white">
       <div class="extend-strip">
         <div class="container-fluid px-0">
           <div class="form-header">
@@ -46,6 +46,7 @@
         </div>
       </div>
       <div class="form-body">
+        <div class="white-strip" />
         <b-tabs content-class="mt-3" nav-class="c-tabs border-bottom-0" active-nav-item-class="c-tabs--active">
           <b-tab active>
             <template #title>
@@ -347,10 +348,6 @@ export default {
 <style lang="scss" scoped>
   ::v-deep {
     .extend-strip {
-      position: absolute;
-      top: 85px;
-      min-height: 64px;
-      left: 0;
       width: 100%;
       background-color: #0580FD;
       .container-fluid {
@@ -394,7 +391,6 @@ export default {
       }
     }
     .form-body {
-      margin-top: 5.55%;
       background-color: #fff;
       max-width: 920px;
       margin-left: auto;
@@ -402,6 +398,10 @@ export default {
       padding: 18px 0;
       font-family: 'Hiragino Kaku Gothic Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #7B7B7B;
+      position: relative;
+      .white-strip {
+        background: white;
+      }
       .c-tabs {
         .nav-link {
           padding: 4px 8px;

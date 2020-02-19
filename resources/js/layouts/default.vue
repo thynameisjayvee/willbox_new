@@ -1,7 +1,7 @@
 <template>
   <div class="custom-container">
     <div class="custom-wrapper">
-      <v-navbar type="light" :navTextColor="'black--text'" />
+      <v-navbar type="light" :nav-text-color="'black--text'" :custom-width="'w-1170-auto'" />
       <child />
     </div>
     <footer class="custom-footer">
@@ -19,7 +19,7 @@ export default {
   name: 'MainLayout',
 
   components: {
-    'v-navbar' : Navbar
+    'v-navbar': Navbar
   }
 }
 </script>
@@ -32,7 +32,7 @@ export default {
       padding-bottom: 80px;
     }
     &-wrapper {
-      max-width: 1170px;
+      // max-width: 1170px;
       margin: 0 auto;
     }
     &-footer {

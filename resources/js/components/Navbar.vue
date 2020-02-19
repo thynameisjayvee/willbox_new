@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" :type="type" class="rm-box-shadow c-px-22px">
+  <b-navbar toggleable="lg" :type="type" :class="['rm-box-shadow c-px-22px', customWidth]">
     <b-navbar-brand class="c-navbar-brand" :to="{ name: 'welcome' }">
       Giho
     </b-navbar-brand>
@@ -33,6 +33,10 @@ export default {
     navTextColor: {
       type: String,
       default: 'white--text'
+    },
+    customWidth: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -69,5 +73,10 @@ export default {
     &-box-shadow {
       box-shadow: none;
     }
+  }
+  .w-1170-auto {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
