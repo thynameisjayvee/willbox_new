@@ -293,7 +293,7 @@
             <template #title>
               <div class="c-search-tabs-title">
                 <img src="assets/img/warehouse.png" alt="warehouse-icon">
-                <span style="vertical-align: middle;">通関</span>
+                <span style="vertical-align: middle;">倉庫</span>
               </div>
             </template>
             <!-- FORM START -->
